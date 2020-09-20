@@ -3,9 +3,9 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="main.css">
-</head>
-<body>
 
+</head>
+<body> 
 <div class="header">
   <a href="index.html" class="logo">Ayush</a>
   <div class="header-riaght">
@@ -18,8 +18,54 @@
 </div>
 
 <div style="padding-left:20px">
-  
+  <br><br><br>
+  <label  style="background-color: yellow;" id="alert"></label>
+  <br><br><br>
+  <label id="num1">1</label>
+  +
+  <label id="num2">2</label>
+=
+
+<input type="text" id="result">
+
+<button type="button" onclick="GenNumber()">genrate numbers</button>
+<button type="button" onclick="CheckNumber()">answer</button>
 </div>
 
+<script>
+ 
+
+  function GenNumber(){
+
+document.getElementById('num1').innerText =Math.floor(Math.random() * 10); 
+document.getElementById('num2').innerText = Math.floor(Math.random() * 10); 
+
+document.getElementById('alert').innerText="number generated. please enter your answer."
+
+  }
+
+
+
+  function CheckNumber(){
+
+var num1 =document.getElementById('num1').innerText ; 
+var num2 =document.getElementById('num2').innerText ; 
+var sum = Number(num1) + Number(num2);
+var result = Number(document.getElementById('result').value); 
+
+ if(sum==result)
+ { 
+   document.getElementById('alert').innerText="good job!"
+   document.getElementById('alert').style.backgroundColor = "green";
+ } 
+ else
+ {document.getElementById('alert').innerText="try agan."
+ document.getElementById('alert').style.backgroundColor = "red";
+
+ }
+ 
+ 
+   }
+</script>
 </body>
 </html>
