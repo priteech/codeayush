@@ -7,7 +7,7 @@ body {
 
 .header {
   overflow: hidden;
-  background-color: #eb3333;
+  background-color: #00ff15;
   padding: 20px 10px;
   font-family: Arial;
 }
@@ -29,8 +29,8 @@ body {
 }
 
 .header a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: rgb(250, 250, 71);
+  color: blue;
 }
 
 .header a.active {
